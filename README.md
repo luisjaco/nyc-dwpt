@@ -11,11 +11,13 @@
 2. [Background](#background)
 3. [Cost Analysis](#cost-analysis)
 4. [Simulation](#simulation)
+   
     4a. [Simulation #1: All-Traffic Scenario](#simulation-1-all-traffic-scenario)
+   
     4b. [Simulation #2: 42nd St Scenario](#simulation-2-42nd-st-scenario)
-5. [Charge Gain Analysis](#charge-gain-analysis)
-6. [Conclusion](#conclusion)
-7. [References](#references)
+6. [Charge Gain Analysis](#charge-gain-analysis)
+7. [Conclusion](#conclusion)
+8. [References](#references)
 
 ## Overview
 The number of EVs on the road in the U.S. is projected to be roughly 78.5 million by 2035, up from 
@@ -38,10 +40,11 @@ moving or idling. Under this standard, we evaluate and analyze the performance-c
 multiple different coil configurations: Dual Receiver DD (Dual WPT-3), Segmented DDQ WPT-3, and
 Large Single Coil WPT-4.
 
-<figure>
-    <img src='/report/resources/J2954.png' width='50%' alt='Ground Assembly structure defined by the SAE J2954 Standard'>
-    <figcaption>Ground Assembly structure defined by the SAE J2954 Standard</figcaption>
-</figure>
+<p align="center">
+  <img src="report/resources/J2954.png" width="80%">
+  <br>
+  <em>Ground Assembly structure defined by the SAE J2954 Standard</em>
+</p>
 
 ## Cost Analysis 
 We compare the cost impact of three wireless EV charging coil configurations, the WPT-3 (DD), 
@@ -67,20 +70,23 @@ Using SUMO, we designed and implemented various real-world traffic scenarios in 
 trip times for vehicles driving within New York City. This allows us to gain a working understanding
 of the potential dwell time spent within a drive.
 
-<div style="display: flex; justify-content: space-between; items-center">
-    <figure style='flex: 1;'>
-        <img src='/report/resources/simulation_area_nyc_midtown.png' height='100%' width='100%' alt='Simulated New York City area (Midtown Manhattan)'>
-        <figcaption>Simulated New York City area (Midtown Manhattan)</figcaption>
-    </figure>
-    <figure style='flex: 1;'>
-        <img src='/report/resources/all_density1.png' height='100%' width='100%' alt='Histogram of trip times under low traffic scenario'>
-        <figcaption>Histogram of trip times under low traffic scenario</figcaption>
-    </figure>
-    <figure style='flex: 1;'>
-        <img src='/report/resources/all_density3.png' height='100%' width='100%' alt='Histogram of trip times under low traffic scenario'>
-        <figcaption>Histogram of trip times under high traffic scenario</figcaption>
-    </figure>
-</div>
+<p align="center">
+  <img src="/report/resources/simulation_area_nyc_midtown.png" width="60%">
+  <br>
+  <em>Simulated New York City area (Midtown Manhattan)</em>
+</p>
+
+<p align="center">
+  <img src="/report/resources/all_density1.png" width="60%">
+  <br>
+  <em>Histogram of trip times under low traffic scenario</em>
+</p>
+
+<p align="center">
+  <img src="/report/resources/all_density3.png" width="60%">
+  <br>
+  <em>Histogram of trip times under high traffic scenario</em>
+</p>
 
 ### Simulation #2: 42nd St Scenario
 After performing domain-specific research, our team deduced that the most optimal road to implement 
@@ -92,20 +98,23 @@ DWPT lanes would be 42nd St:
 We iterated on our previous simulation. Simulating medium traffic throughout the city, however, only
 tracking the trip times of vehicles who had traveled across the entirety of 42nd St.
 
-<div style="display: flex; justify-content: space-between; items-center">
-    <figure style='flex: 1;'>
-        <img src='/report/resources/sumo_42nd.png' height='100%' width='100%' alt='NYC with targeted 42nd St'>
-        <figcaption>NYC with targeted 42nd St</figcaption>
-    </figure>
-    <figure style='flex: 1;'>
-        <img src='/report/resources/sumo_5th_ave_E42nd_st.gif' height='100%' width='100%' alt='5th Ave & E 42nd St under medium traffic'>
-        <figcaption>5th Ave & E 42nd St under medium traffic</figcaption>
-    </figure>
-    <figure style='flex: 1;'>
-        <img src='/report/resources/nyc42nd.png' height='100%' width='100%' alt='Histogram of trip times spent among vehicles which crossed 42nd St'>
-        <figcaption>Histogram of trip times spent among vehicles which crossed 42nd St</figcaption>
-    </figure>
-</div>
+<p align="center">
+  <img src="/report/resources/sumo_42nd.png" width="60%">
+  <br>
+  <em>NYC with targeted 42nd St</em>
+</p>
+
+<p align="center">
+  <img src="/report/resources/sumo_5th_ave_E42nd_st.gif" width="60%">
+  <br>
+  <em>5th Ave & E 42nd St under medium traffic</em>
+</p>
+
+<p align="center">
+  <img src="/report/resources/nyc42nd.png" width="60%">
+  <br>
+  <em>Histogram of trip times spent among vehicles which crossed 42nd St</em>
+</p>
 
 ## Charge Gain Analysis
 Utilizing our 42nd St simulation, we obtain an average trip time of 40.64 minutes to drive across
